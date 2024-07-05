@@ -1,0 +1,186 @@
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --container-background: #fff;
+    --button-background: #28a745;
+    --button-hover: #218838;
+    --task-complete: #888;
+    --border-color: #ccc;
+}
+
+body.dark {
+    --background-color: #333;
+    --text-color: #fff;
+    --container-background: #444;
+    --button-background: #007bff;
+    --button-hover: #0056b3;
+    --task-complete: #bbb;
+    --border-color: #666;
+    --task-text-color: #000; /* Added for dark mode task text color */
+}
+
+h3 {
+   color: var(--task-text-color);
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-decoration: underline;
+}
+
+.fot {
+    background-color: #181818;
+    border-radius: 50px;
+    padding: 5px 5px;
+    margin: 0 auto;
+    box-shadow: #050505 0 0 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--container-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+h1 {
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px; /* Ensure the logo is square */
+    border-radius: 50%;
+    box-shadow: 0 0 8px black;
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto; /* Center the logo horizontally */
+    display: block; /* Ensure it behaves as a block element */
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input[type="text"], input[type="date"], select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: var(--button-background);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation: fadeIn 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--task-text-color); /* Task text color */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: var(--task-complete);
+}
+
+li .actions {
+    display: flex;
+    gap: 5px;
+}
+
+li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+li button:hover {
+    background-color: #c82333;
+}
+
+.priority-low {
+    border-left: 5px solid green;
+}
+
+.priority-medium {
+    border-left: 5px solid orange;
+}
+
+.priority-high {
+    border-left: 5px solid red;
+}
+
+.toggle-theme {
+    background-color: var(--button-background);
+    color: #fff;
+    padding: 2px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 15px;
+}
+
+.toggle-theme:hover {
+    background-color: var(--button-hover);
+}
